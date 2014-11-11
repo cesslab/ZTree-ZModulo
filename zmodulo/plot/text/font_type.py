@@ -11,7 +11,7 @@ class FontType:
         """
         self.font_type = font_type
 
-        self.template = '\ttext = {font_type};\n'
+        self.template = '\tfont = {font_type};\n'
 
     def to_str(self):
         """

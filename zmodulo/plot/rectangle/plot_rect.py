@@ -1,7 +1,7 @@
 from zmodulo.plot.rectangle.dimension import Dimension
 from zmodulo.plot.properties.condition import Condition
 from zmodulo.plot.properties.coordinate import Coordinate
-from zmodulo.plot.rectangle.style import Style
+from zmodulo.plot.rectangle.rectangle_style import RectangleStyle
 
 
 class PlotRect:
@@ -20,7 +20,7 @@ class PlotRect:
             self.dimension = dimension
 
         if style is None:
-            self.style = Style()
+            self.style = RectangleStyle()
         else:
             self.style = style
 

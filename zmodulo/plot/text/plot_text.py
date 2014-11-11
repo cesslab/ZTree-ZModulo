@@ -1,6 +1,6 @@
 from zmodulo.plot.properties.coordinate import Coordinate
 from zmodulo.plot.text.alignment import Alignment
-from zmodulo.plot.text.style import Style
+from zmodulo.plot.text.text_style import TextStyle
 from zmodulo.plot.properties.condition import Condition
 from zmodulo.plot.text.text import Text
 
@@ -20,7 +20,7 @@ class PlotText():
         :param alignment: the text alignment
         :type alignment: Alignment
         :param font: the text the text is rendered in
-        :type font: Style
+        :type font: TextStyle
         """
         self.id = element_id
 
@@ -45,7 +45,7 @@ class PlotText():
             self.alignment = alignment
 
         if font is None:
-            self.font = Style()
+            self.font = TextStyle()
         else:
             self.font = font
 

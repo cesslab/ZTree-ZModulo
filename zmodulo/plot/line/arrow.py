@@ -1,7 +1,5 @@
 class Arrow:
-    """
-    The Z-Tree Line Arrow Property
-    """
+    """ A Z-Tree plot arrow """
 
     ENABLED = "TRUE"
     DISABLED = "FALSE"
@@ -21,6 +19,7 @@ class Arrow:
 
     def to_str(self):
         """
+        Converts the arrow instance to a z-tree plot line property declaration
         :return: Z-Tree arrowclosed property assignment
         :rtype: str
         """

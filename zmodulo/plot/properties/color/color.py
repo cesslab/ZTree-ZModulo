@@ -14,7 +14,7 @@ class Color:
         self.green = green
         self.blue = blue
 
-        self.template = 'rgb({red},{green},{blue}'
+        self.template = 'rgb({red},{green},{blue})'
 
     def to_str(self):
         return self.template.format(red=str(self.red), green=str(self.green), blue=str(self.blue))

@@ -1,4 +1,4 @@
-from zmodulo.plot.rectangle.dimension import Dimension
+from zmodulo.plot.rectangle.rectangle_dimension import RectangleDimension
 from zmodulo.plot.properties.condition import Condition
 from zmodulo.plot.properties.coordinate import Coordinate
 from zmodulo.plot.rectangle.rectangle_style import RectangleStyle
@@ -15,14 +15,14 @@ class PlotRect:
             self.position = position
 
         if dimension is None:
-            self.dimension = Dimension()
+            self.dimension = RectangleDimension()
         else:
             self.dimension = dimension
 
         if style is None:
-            self.style = RectangleStyle()
+            self.rectangle_style = RectangleStyle()
         else:
-            self.style = style
+            self.rectangle_style = style
 
         if condition is None:
             self.condition = Condition()
@@ -41,5 +41,5 @@ class PlotRect:
         return self.template.format(
             id=self.id,
             body=self.condition.to_str() + self.position.to_str() + self.dimension.to_str() +
-            self.style.to_str()
+            self.rectangle_style.to_str()
         )

@@ -20,7 +20,7 @@ class TestTextColor(TestCase):
         Tests the generation of a text color declaration with
         string parameters
         """
-        text_color = TextColor(Color("0", "0", "0"))
+        text_color = TextColor("0", "0", "0")
         self.assertEqual(text_color.to_str(), "\ttextcolor = rgb(0,0,0);\n")
 
     def test_string_named_value_declaration_generation(self):
@@ -28,7 +28,7 @@ class TestTextColor(TestCase):
         Tests the generation of a text color declaration with
         string parameters
         """
-        text_color = TextColor(Color("FOO", "BAR", "BAZ"))
+        text_color = TextColor("FOO", "BAR", "BAZ")
         self.assertEqual(text_color.to_str(), "\ttextcolor = rgb(FOO,BAR,BAZ);\n")
 
 if __name__ == '__main__':

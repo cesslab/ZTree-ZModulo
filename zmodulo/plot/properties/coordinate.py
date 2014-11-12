@@ -25,5 +25,5 @@ class Coordinate:
         :return: z-tree coordinate declaration
         :rtype: str
         """
-        return self.template.format(self.x_id, str(self.x), str(self.y_id), str(self.y))
+        return self.template.format(self.x_id, self.x, self.y_id, self.y)
 

@@ -2,21 +2,18 @@ from zmodulo.plot.properties.color.color import Color
 from zmodulo.plot.properties.color.black import Black
 
 
-
 class TextColor:
     """ A Plot Text Text Color Template
     """
 
-    def __init__(self, color=None):
+    def __init__(self, red=Black.red, green=Black.green, blue=Black.blue):
         """
         Initialize the plot text text color instance
-        :param color: text color
-        :type color: Color
+        :param red: text red color percentage
+        :param green: text green color percentage
+        :param blue: text blue color percentage
         """
-        if color is None:
-            self.color = Color(Black.red, Black.green, Black.blue)
-        else:
-            self.color = color
+        self.color = Color(red, green, blue)
 
         self.template = '\ttextcolor = {textcolor};\n'
 

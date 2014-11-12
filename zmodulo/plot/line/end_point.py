@@ -15,5 +15,3 @@ class EndPoint(Coordinate):
         :type y: number
         """
         super().__init__(x, y, "x2", "y2")
-        self.x = x
-        self.y = y

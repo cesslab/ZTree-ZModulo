@@ -8,10 +8,10 @@ class TextStyle:
     """ The plot text style template
     """
 
-    def __init__(self, text_color=None, font_size=None, font_weight=None, font_type=None):
+    def __init__(self, color=None, font_size=None, font_weight=None, font_type=None):
         """
-        :param text_color: text color
-        :type text_color: TextColor
+        :param color: text color
+        :type color: TextColor
         :param font_size:
         :type font_size:
         :param font_weight: text weight
@@ -21,10 +21,10 @@ class TextStyle:
         :return:
         :rtype:
         """
-        if text_color is None:
-            self.text_color = TextColor()
+        if color is None:
+            self.color = TextColor()
         else:
-            self.text_color = text_color
+            self.color = color
 
         if font_type is None:
             self.font_type = FontType()
@@ -50,7 +50,7 @@ class TextStyle:
         :rtype: str
         """
         return self.template.format(
-            text_color=self.text_color.to_str(),
+            text_color=self.color.to_str(),
             font_type=self.font_type.to_str(),
             font_weight=self.font_weight.to_str(),
             font_size=self.font_size.to_str()

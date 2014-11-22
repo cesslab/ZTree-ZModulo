@@ -7,7 +7,7 @@ from zmodulo.plot.text.text import Text
 
 class PlotText():
     def __init__(self, element_id="", condition=None, text=None, position=None, alignment=None,
-                 font=None):
+                 style=None):
         """
         :param element_id: z-tree element id
         :type element_id: str
@@ -19,8 +19,8 @@ class PlotText():
         :type position: Coordinate
         :param alignment: the text alignment
         :type alignment: Alignment
-        :param font: the text the text is rendered in
-        :type font: TextStyle
+        :param style: the text the text is rendered in
+        :type style: TextStyle
         """
         self.id = element_id
 
@@ -44,10 +44,10 @@ class PlotText():
         else:
             self.alignment = alignment
 
-        if font is None:
-            self.font = TextStyle()
+        if style is None:
+            self.style = TextStyle()
         else:
-            self.font = font
+            self.style = style
 
         self.template = 'plottext "{}"{{\n{}}}'
 
@@ -60,6 +60,6 @@ class PlotText():
         text = self.text.to_str()
         position = self.position.to_str()
         alignment = self.alignment.to_str()
-        font = self.font.to_str()
+        font = self.style.to_str()
 
         return self.template.format(self.id, condition + text + position + alignment + font)

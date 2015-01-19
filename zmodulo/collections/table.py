@@ -11,7 +11,6 @@ class Table:
         self.find_var = ""
         self.find_filter = ""
         self.find_template = ".find({})"
-        self.same_template = "Same({})"
         self.str = ""
 
     def filter_find(self, find_filter, find_var):
@@ -36,5 +35,12 @@ class Table:
         find_template = self.name + '.find({v})'
         return find_template.format(v=find_var)
 
-    def same(self, var_name):
-        return self.same_template.format(var_name)
+    @staticmethod
+    def same(var_name):
+        """
+        :param var_name: variable name
+        :type var_name: str
+        :return: find string
+        :rtype: str
+        """
+        return "Same({})".format(var_name)
